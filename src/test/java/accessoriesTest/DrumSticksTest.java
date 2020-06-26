@@ -28,4 +28,14 @@ public class DrumSticksTest {
     public void hasSellPrice(){
         assertEquals(3.00, drumSticks.getSellPrice(), 0.01);
     }
+
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(2.00, drumSticks.profitOnItem(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(67.0, drumSticks.calculateMarkup(), 0.01);
+    }
 }
