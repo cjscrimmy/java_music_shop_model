@@ -30,4 +30,8 @@ public abstract class Instrument implements IPlay{
     public int getSellPrice(){
         return this.sellPrice;
     }
+
+    public int profitOnItem(){
+        return this.sellPrice - this.buyPrice;
+    }
 }

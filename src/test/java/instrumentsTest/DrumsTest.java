@@ -39,4 +39,9 @@ public class DrumsTest {
         assertEquals("boom boom tish", drums.play());
     }
 
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(150, drums.profitOnItem());
+    }
+
 }
