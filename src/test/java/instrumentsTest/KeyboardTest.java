@@ -43,4 +43,9 @@ public class KeyboardTest {
     public void canCalculateProfit(){
         assertEquals(90, keyboard.profitOnItem());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(45, keyboard.calculateMarkup());
+    }
 }

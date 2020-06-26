@@ -44,4 +44,9 @@ public class DrumsTest {
         assertEquals(150, drums.profitOnItem());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(38, drums.calculateMarkup());
+    }
+
 }

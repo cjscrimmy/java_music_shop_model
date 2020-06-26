@@ -44,5 +44,11 @@ public class KeytarTest {
         assertEquals(100, keytar.profitOnItem());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(33, keytar.calculateMarkup());
+    }
+
+
 
 }

@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public abstract class Instrument implements IPlay{
+public abstract class Instrument implements IPlay, ISell {
     private String manufacturer;
     private String material;
     private int buyPrice;
@@ -33,5 +34,12 @@ public abstract class Instrument implements IPlay{
 
     public int profitOnItem(){
         return this.sellPrice - this.buyPrice;
+    }
+
+    public long calculateMarkup(){
+        double profit = profitOnItem();
+        double markup = profit/this.sellPrice;
+        long percentage = Math.round(markup * 100);
+        return percentage;
     }
 }

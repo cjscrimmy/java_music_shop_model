@@ -43,4 +43,9 @@ public class GuitarTest {
     public void canCalculateProfit(){
         assertEquals(150, guitar.profitOnItem());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(33, guitar.calculateMarkup());
+    }
 }
