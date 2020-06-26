@@ -1,14 +1,11 @@
 package accessories;
 
 
-public class DrumSticks {
-    private String description;
+public class DrumSticks extends Accessories {
 
-    public DrumSticks(String description){
-        this.description = description;
+    public DrumSticks(String description, double buyPrice, double sellPrice){
+       super(description, buyPrice, sellPrice);
     }
 
-    public String getDescription(){
-        return this.description;
-    }
+
 }

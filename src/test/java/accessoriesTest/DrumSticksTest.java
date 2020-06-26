@@ -11,11 +11,21 @@ public class DrumSticksTest {
 
     @Before
     public void setUp(){
-        drumSticks = new DrumSticks("Wooden Drum Sticks");
+        drumSticks = new DrumSticks("Wooden Drum Sticks", 1.00, 3.00);
     }
 
     @Test
     public void getDescription(){
         assertEquals("Wooden Drum Sticks", drumSticks.getDescription());
+    }
+
+    @Test
+    public void hasBuyPrice(){
+        assertEquals(1.00, drumSticks.getBuyPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellPrice(){
+        assertEquals(3.00, drumSticks.getSellPrice(), 0.01);
     }
 }
