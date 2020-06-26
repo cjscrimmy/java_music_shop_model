@@ -1,4 +1,4 @@
-package ShopTest;
+package shopTest;
 
 import accessories.GuitarStrings;
 import instruments.Drums;
