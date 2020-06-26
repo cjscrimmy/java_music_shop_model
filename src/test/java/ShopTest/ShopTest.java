@@ -28,4 +28,21 @@ public class ShopTest {
     public void hasName(){
         assertEquals("Ray's Music", shop.getName());
     }
+
+    @Test
+    public void shopStartsWithNoStock(){
+        assertEquals(0, shop.stockCount());
+    }
+
+    @Test
+    public void canAddInstrumentToStock(){
+        shop.addStock(guitar);
+        assertEquals(1, shop.stockCount());
+    }
+
+    @Test
+    public void canAddAccessoryToStock(){
+        shop.addStock(strings);
+        assertEquals(1, shop.stockCount());
+    }
 }
