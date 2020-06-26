@@ -11,7 +11,7 @@ public class DrumsTest {
 
     @Before
     public void setUp(){
-        drums = new Drums("Yamaha", "Maple");
+        drums = new Drums("Yamaha", "Maple", 250, 400);
     }
 
     @Test
@@ -22,6 +22,21 @@ public class DrumsTest {
     @Test
     public void hasMaterialItsMadeFrom(){
         assertEquals("Maple", drums.getMaterial());
+    }
+
+    @Test
+    public void hasBuyPrice(){
+        assertEquals(250, drums.getBuyPrice());
+    }
+
+    @Test
+    public void hasSellPrice(){
+        assertEquals(400, drums.getSellPrice());
+    }
+
+    @Test
+    public void canBePlayed(){
+        assertEquals("boom boom tish", drums.play());
     }
 
 }
