@@ -11,12 +11,17 @@ public class DrumsTest {
 
     @Before
     public void setUp(){
-        drums = new Drums("Yamaha");
+        drums = new Drums("Yamaha", "Maple");
     }
 
     @Test
     public void hasManufacturer(){
         assertEquals("Yamaha", drums.getManufacturer());
+    }
+
+    @Test
+    public void hasMaterialItsMadeFrom(){
+        assertEquals("Maple", drums.getMaterial());
     }
 
 }
