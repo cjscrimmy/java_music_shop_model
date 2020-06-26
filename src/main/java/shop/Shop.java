@@ -25,4 +25,9 @@ public class Shop {
     public void addStock(ISell itemToAdd){
         this.stock.add(itemToAdd);
     }
+
+    public void removeStock(ISell itemToRemove){
+        int index = stock.indexOf(itemToRemove);
+        stock.remove(index);
+    }
 }

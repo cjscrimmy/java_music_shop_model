@@ -45,4 +45,15 @@ public class ShopTest {
         shop.addStock(strings);
         assertEquals(1, shop.stockCount());
     }
+
+    @Test
+    public void canRemoveStock(){
+        shop.addStock(strings);
+        shop.addStock(guitar);
+        shop.addStock(drums);
+
+        shop.removeStock(guitar);
+
+        assertEquals(2, shop.stockCount());
+    }
 }
