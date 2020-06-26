@@ -6,10 +6,10 @@ import behaviours.ISell;
 public abstract class Instrument implements IPlay, ISell {
     private String manufacturer;
     private String material;
-    private int buyPrice;
-    private int sellPrice;
+    private double buyPrice;
+    private double sellPrice;
 
-    public Instrument(String manufacturer, String material, int buyPrice, int sellPrice){
+    public Instrument(String manufacturer, String material, double buyPrice, double sellPrice){
         this.manufacturer = manufacturer;
         this.material = material;
         this.buyPrice = buyPrice;
@@ -24,22 +24,22 @@ public abstract class Instrument implements IPlay, ISell {
         return this.material;
     }
 
-    public int getBuyPrice(){
+    public double getBuyPrice(){
         return this.buyPrice;
     }
 
-    public int getSellPrice(){
+    public double getSellPrice(){
         return this.sellPrice;
     }
 
-    public int profitOnItem(){
+    public double profitOnItem(){
         return this.sellPrice - this.buyPrice;
     }
 
-    public long calculateMarkup(){
+    public double calculateMarkup(){
         double profit = profitOnItem();
-        double markup = profit/this.sellPrice;
-        long percentage = Math.round(markup * 100);
-        return percentage;
+        double markup = (profit/this.sellPrice)*100;
+        markup = Math.round(markup);
+        return markup;
     }
 }

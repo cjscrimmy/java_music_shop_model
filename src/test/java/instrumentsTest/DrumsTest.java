@@ -11,7 +11,7 @@ public class DrumsTest {
 
     @Before
     public void setUp(){
-        drums = new Drums("Yamaha", "Maple", 250, 400);
+        drums = new Drums("Yamaha", "Maple", 250.00, 400.00);
     }
 
     @Test
@@ -26,12 +26,12 @@ public class DrumsTest {
 
     @Test
     public void hasBuyPrice(){
-        assertEquals(250, drums.getBuyPrice());
+        assertEquals(250.00, drums.getBuyPrice(), 0.01);
     }
 
     @Test
     public void hasSellPrice(){
-        assertEquals(400, drums.getSellPrice());
+        assertEquals(400.00, drums.getSellPrice(), 0.01);
     }
 
     @Test
@@ -41,12 +41,12 @@ public class DrumsTest {
 
     @Test
     public void canCalculateProfit(){
-        assertEquals(150, drums.profitOnItem());
+        assertEquals(150.00, drums.profitOnItem(), 0.01);
     }
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(38, drums.calculateMarkup());
+        assertEquals(38.0, drums.calculateMarkup(), 0.01);
     }
 
 }

@@ -11,7 +11,7 @@ public class KeytarTest {
 
     @Before
     public void setUp(){
-        keytar = new Keytar("Roland", "Plastic", 200, 300);
+        keytar = new Keytar("Roland", "Plastic", 200.00, 300.00);
     }
 
     @Test
@@ -31,22 +31,22 @@ public class KeytarTest {
 
     @Test
     public void hasBuyPrice(){
-        assertEquals(200, keytar.getBuyPrice());
+        assertEquals(200.00, keytar.getBuyPrice(), 0.01);
     }
 
     @Test
     public void hasSellPrice(){
-        assertEquals(300, keytar.getSellPrice());
+        assertEquals(300.00, keytar.getSellPrice(), 0.01);
     }
 
     @Test
     public void canCalculateProfit(){
-        assertEquals(100, keytar.profitOnItem());
+        assertEquals(100.00, keytar.profitOnItem(), 0.01);
     }
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(33, keytar.calculateMarkup());
+        assertEquals(33.0, keytar.calculateMarkup(), 0.1);
     }
 
 

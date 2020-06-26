@@ -1,7 +1,7 @@
 package instruments;
 
 public class Keytar extends Instrument{
-    public Keytar(String manufacturer, String material, int buyPrice, int sellPrice){
+    public Keytar(String manufacturer, String material, double buyPrice, double sellPrice){
         super(manufacturer, material, buyPrice, sellPrice);
     }
 

@@ -11,7 +11,7 @@ public class KeyboardTest {
 
     @Before
     public void setUp(){
-        keyboard = new Keyboard("Yamaha", "Plastic", 110, 200);
+        keyboard = new Keyboard("Yamaha", "Plastic", 110.00, 200.00);
     }
 
     @Test
@@ -31,21 +31,21 @@ public class KeyboardTest {
 
     @Test
     public void hasBuyPrice(){
-        assertEquals(110, keyboard.getBuyPrice());
+        assertEquals(110.00, keyboard.getBuyPrice(), 0.01);
     }
 
     @Test
     public void hasSellPrice(){
-        assertEquals(200, keyboard.getSellPrice());
+        assertEquals(200.00, keyboard.getSellPrice(), 0.01);
     }
 
     @Test
     public void canCalculateProfit(){
-        assertEquals(90, keyboard.profitOnItem());
+        assertEquals(90.00, keyboard.profitOnItem(), 0.01);
     }
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(45, keyboard.calculateMarkup());
+        assertEquals(45.0, keyboard.calculateMarkup(), 0.1);
     }
 }

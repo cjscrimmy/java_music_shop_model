@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void setUp(){
-        guitar = new Guitar("Fender", "Rosewood", 300, 450);
+        guitar = new Guitar("Fender", "Rosewood", 300.00, 450.00);
     }
 
     @Test
@@ -31,21 +31,21 @@ public class GuitarTest {
 
     @Test
     public void hasBuyPrice(){
-        assertEquals(300, guitar.getBuyPrice());
+        assertEquals(300.00, guitar.getBuyPrice(), 0.01);
     }
 
     @Test
     public void hasSellPrice(){
-        assertEquals(450, guitar.getSellPrice());
+        assertEquals(450.00, guitar.getSellPrice(), 0.01);
     }
 
     @Test
     public void canCalculateProfit(){
-        assertEquals(150, guitar.profitOnItem());
+        assertEquals(150.00, guitar.profitOnItem(), 0.01);
     }
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(33, guitar.calculateMarkup());
+        assertEquals(33.0, guitar.calculateMarkup(), 0.01);
     }
 }

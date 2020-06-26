@@ -1,7 +1,7 @@
 package instruments;
 
 public class Piano extends Instrument{
-    public Piano(String manufacturer, String material, int buyPrice, int sellPrice){
+    public Piano(String manufacturer, String material, double buyPrice, double sellPrice){
         super(manufacturer, material, buyPrice, sellPrice);
     }
 

@@ -1,7 +1,7 @@
 package instruments;
 
 public class Keyboard extends Instrument{
-    public Keyboard(String manufacturer, String material, int buyPrice, int sellPrice){
+    public Keyboard(String manufacturer, String material, double buyPrice, double sellPrice){
         super(manufacturer, material, buyPrice, sellPrice);
     }
 
